@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# TODO App Frontend - Copilot Orchestra Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A practical example of using **GitHub Copilot Orchestra** to build a frontend for a TODO application. This project demonstrates how to leverage AI-powered development workflows with multiple specialized agents working together.
 
-Currently, two official plugins are available:
+日本語版の README は[こちら](./README-ja.md)。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+This repository contains the frontend implementation for a TODO application, built using:
+- **React** with **TypeScript**
+- **Vite** for fast development and optimized builds
+- **GitHub Copilot Orchestra** for AI-assisted development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project showcases how to use Copilot Orchestra to orchestrate multiple AI agents (issue, plan, implementation, review, and PR agents) to streamline the development process.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [Docker](https://www.docker.com/get-started) installed
+- [Visual Studio Code](https://code.visualstudio.com/) with [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- GitHub account
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Quick Start with Dev Container
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kohei3110/gh-copilot-multirepo-demo-frontend.git
+   cd gh-copilot-multirepo-demo-frontend
+   ```
+
+2. **Open in Dev Container**
+   - Open VS Code
+   - Press `F1` or `Cmd+Shift+P` (Mac) / `Ctrl+Shift+P` (Windows/Linux)
+   - Select: `Dev Containers: Reopen in Container`
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+The dev container includes:
+- Git CLI
+- GitHub CLI (gh)
+- GitHub Copilot
+- Web Search for Copilot extension
+- ESLint & Prettier
+
+## Features
+
+- Modern React UI for TODO management
+- TypeScript for type safety
+- Vite for fast HMR and optimized builds
+- Responsive design
+- ESLint configuration for code quality
+- Pre-configured dev container environment
+
+## Project Structure
+
+```
+├── .devcontainer/          # Dev container configuration
+├── public/                 # Static assets
+├── src/
+│   ├── App.tsx            # Main application component
+│   ├── main.tsx           # Application entry point
+│   ├── assets/            # Images and other assets
+│   └── components/        # React components
+├── index.html             # HTML template
+└── vite.config.ts         # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## About Copilot Orchestra
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Copilot Orchestra is an advanced workflow that coordinates multiple AI agents:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Issue Agent**: Analyzes requirements and creates detailed issues
+2. **Plan Agent**: Creates implementation plans
+3. **Implementation Agent**: Writes code based on the plan
+4. **Review Agent**: Reviews and improves code quality
+5. **PR Agent**: Creates pull requests with comprehensive descriptions
+
+This orchestrated approach ensures high-quality, well-documented code with minimal manual intervention.
+
+## Related Projects
+
+- [Backend Repository](https://github.com/kohei3110/gh-copilot-multirepo-demo-backend) - The backend API for this TODO application
+
+---
+
+**Note**: This is a demonstration project for educational purposes, showcasing best practices in AI-assisted development with GitHub Copilot Orchestra.
+

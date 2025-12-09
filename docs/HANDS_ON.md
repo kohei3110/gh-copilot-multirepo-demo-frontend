@@ -2,7 +2,7 @@
 
 This hands-on guide walks you through building a TODO application frontend using GitHub Copilot Orchestra. You'll learn how to leverage multiple AI agents to streamline your development workflow with React and TypeScript.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this tutorial, you will:
 - Set up a dev container environment with necessary tools
@@ -14,7 +14,7 @@ By completing this tutorial, you will:
 - Write tests and ensure code quality
 - Create pull requests using AI-assisted workflows
 
-## 📚 Prerequisites
+## Prerequisites
 
 Before starting, ensure you have:
 - Basic knowledge of React and TypeScript
@@ -24,7 +24,7 @@ Before starting, ensure you have:
 - GitHub Copilot subscription
 - GitHub account
 
-## 🏁 Part 1: Environment Setup
+## Part 1: Environment Setup
 
 ### Step 1.1: Open the Project in Dev Container
 
@@ -66,7 +66,7 @@ gh auth login
 
 Follow the prompts to authenticate with your GitHub account.
 
-## 🤖 Part 2: Understanding Copilot Orchestra
+## Part 2: Understanding Copilot Orchestra
 
 Copilot Orchestra coordinates multiple specialized AI agents:
 
@@ -95,7 +95,7 @@ User Request
 5. **Review Agent**: Ensures code quality and best practices
 6. **PR Agent**: Creates comprehensive pull requests
 
-## 🔨 Part 3: Building the TODO Frontend
+## Part 3: Building the TODO Frontend
 
 ### Step 3.1: Explore the Existing Code Structure
 
@@ -123,10 +123,10 @@ The dev server should start on `http://localhost:5173`. Your browser should auto
 ### Step 3.3: Understanding the Vite Setup
 
 This project uses Vite for:
-- ⚡️ Lightning-fast HMR (Hot Module Replacement)
-- 📦 Optimized production builds
-- 🎨 Built-in TypeScript support
-- 🔧 Simple configuration
+- Lightning-fast HMR (Hot Module Replacement)
+- Optimized production builds
+- Built-in TypeScript support
+- Simple configuration
 
 ### Step 3.4: Project Structure Overview
 
@@ -147,7 +147,7 @@ gh-copilot-multirepo-demo-frontend/
 └── index.html              # HTML template
 ```
 
-## 🎨 Part 4: Building the UI Components
+## Part 4: Building the UI Components
 
 ### Step 4.1: Understanding Component Architecture
 
@@ -176,7 +176,7 @@ This project uses React's built-in state management:
 - `useEffect` for side effects (API calls)
 - Custom hooks for reusable logic
 
-## 🧪 Part 5: Working with Copilot
+## Part 5: Working with Copilot
 
 ### Step 5.1: Using Copilot Chat
 
@@ -209,7 +209,7 @@ This project uses React's built-in state management:
 
 **Please note that the wording may vary. It's OK if you can confirm that the orchestrator agent is distributing tasks to each agent.**
 
-## 🎯 Practice Exercises
+## Practice Exercises
 
 ### Exercise 1: Add Todo Priority
 Implement a priority system (High, Medium, Low) for todos with color coding.
@@ -226,7 +226,7 @@ Build a dashboard showing statistics (total todos, completed, pending, etc.).
 ### Exercise 5: Add Animations
 Use CSS transitions or libraries like Framer Motion to add smooth animations.
 
-## 🎨 Styling Best Practices
+## Styling Best Practices
 
 ### Using CSS Modules
 ```tsx
@@ -251,7 +251,7 @@ function TodoItem() {
 }
 ```
 
-## 🧪 Testing Your Components
+## Testing Your Components
 
 ### Step 6.1: Writing Component Tests
 
@@ -272,7 +272,7 @@ test('renders todo item', () => {
 })
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Container Won't Build
 - Check Docker is running
@@ -292,7 +292,7 @@ test('renders todo item', () => {
 - Clear node_modules and reinstall: `rm -rf node_modules && npm install`
 - Check for TypeScript errors: `npm run build`
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [React Documentation](https://react.dev/)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
@@ -300,7 +300,7 @@ test('renders todo item', () => {
 - [GitHub Copilot Documentation](https://docs.github.com/copilot)
 - [copilot-orchestra](https://github.com/ShepAlderson/copilot-orchestra)
 
-## 🚀 Next Steps
+## Next Steps
 
 After completing this tutorial, consider:
 1. Adding user authentication
